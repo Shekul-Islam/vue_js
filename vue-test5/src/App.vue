@@ -5,14 +5,16 @@ import Footer from "./components/Common/Footer.vue";
 </script>
 
 <template>
-  <div>
-    <Navbar/>
+  <div class="wrapper">
+   <div><Navbar/></div>
   <RouterView />
-    <Footer/>
+    <div><Footer/></div>
   </div>
 
 </template>
 
 <style scoped>
-
+.wrapper{
+  margin: 40px;
+}
 </style>
