@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vue-if-part3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2 v-if="seen"> {{ message}}</h2>
+        <h2 v-else-if="seen2"> {{ message2}}</h2>
+        <h2 v-else-if="seen3"> {{ message3}}</h2>
+        <h2 v-else="seen4"> {{ message4}}</h2>
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                seen:false,
+                seen2:false,
+                seen3:false,
+               
+                message:'hello world..',
+                message2:'hello vue..',
+                message3:'Welcome to Vue..',
+                message4:'Welcome to Vue-corner..'
+            }
+         
+          
+            
+        })
+    </script>
+</body>
+</html>
