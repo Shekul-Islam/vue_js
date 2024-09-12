@@ -4,7 +4,24 @@
 
 <template>
     
-  <div>
+
+  <nav>
+    <ul>
+      <li class="logo"<a href="#">ServiceKey</a></li>
+      <div class="items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Service</a></li>
+      </div>
+      <li class="search-icon">
+        <input type="search" class="search-box" name="search" placeholder="Searching..">
+        <span class="fas fa-search"></span>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- <div>
     <ul>
       <li><RouterLink to="/" class="active" >Home</RouterLink></li>
       <li><RouterLink to="/about" >About</RouterLink></li>
@@ -12,49 +29,24 @@
       <li><RouterLink to="/Service" >Service</RouterLink></li>
       <li class="search"><input type="search" class="search-bar" name="search" placeholder="Searching..." ></li>
     </ul>
-  </div>
+  </div> -->
 
 </template>
 
 <style scoped>
 
-.search {
-  float: right;
-  padding-right: 10px;
-  line-height: 50px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'montserat', sans-serif;
+  color: f2f2f2;
+}
+
+.nav{
   
 }
 
-.search-bar {
-  line-height: 20px;
-  border-radius: 20px;
-  float: right;
-  
-}
 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
 </style>
 
