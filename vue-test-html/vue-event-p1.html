@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vue-if-part4</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+       <h1>{{ message }}</h1>
+
+       <small><h2>You clicked {{ read }} times</h2></small><br>
+       <button v-on:click="read +=10">Count+10</button>
+       <button v-on:click="read -=10">Count-10</button><br>
+       
+<hr>
+
+        <small><h2>You clicked {{ count }} times</h2></small><br>
+       <button v-on:click="total(1)">Count+</button>
+       <button v-on:click="total(-1)">Count-</button>
+<hr><hr>
+
+       <button @click="good">Done</button>
+       
+
+        
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:'Vuejs Events:',
+                done:'Welcome to Vuejs',
+                count:0,
+                read:0,
+
+            },
+
+            methods:{
+                total(val){
+                   this.count += val; 
+                },
+
+                good(event){
+                    alert('Congrates!' + ' ' + this.done)
+
+                    if (event){
+                        console.log(event.target.tagName)
+                    }
+                }
+
+
+            },
+         
+          
+            
+        })
+    </script>
+</body>
+</html>
