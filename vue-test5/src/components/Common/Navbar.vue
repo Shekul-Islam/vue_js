@@ -7,11 +7,11 @@
 
   <nav>
     <ul>
-      <li class="logo"<a href="#">ServiceKey</a></li>
+      <li class="logo"><RouterLink to="/"><h3>ServiceKey</h3></RouterLink></li>
       <div class="items">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li><RouterLink to="/about">About</RouterLink></li>
+        <li><RouterLink to="/contact">Contact</RouterLink></li>
         <li><a href="#">Service</a></li>
       </div>
       <li class="search-icon">
@@ -43,9 +43,7 @@
   color: f2f2f2;
 }
 
-.nav{
-  
-}
+
 
 
 </style>

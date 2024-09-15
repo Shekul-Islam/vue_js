@@ -1,1 +1,0 @@
-<?php /**PATH D:\xampp\htdocs\laravel\pharmacy-by-laravel\resources\views/admin-pages/returns/manufacturerreturnlist.blade.php ENDPATH**/ ?>
