@@ -9,8 +9,9 @@ import BannerLeft from './BannerLeft.vue';
 <template>
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
-            <BannerLeft/>
             <BannerRight/>
+            <BannerLeft/>
+            
             
         </div>
     </div>

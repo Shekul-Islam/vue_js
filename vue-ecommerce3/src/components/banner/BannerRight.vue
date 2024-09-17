@@ -1,19 +1,12 @@
 <script setup>
 import BannerRightUp from './BannerRightUp.vue';
-
+var arraypassing = {name: 'arraypassing', email: 'arraypassing@example.com', image: 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg'}
 
 </script>
 <template>
     <div class="col-lg-4">
-        <BannerRightUp/>
-        <div class="product-offer mb-30" style="height: 200px;">
-            <img class="img-fluid" src="@/assets/img/offer-2.jpg" alt="">
-            <div class="offer-text">
-                <h6 class="text-white text-uppercase">Save 20%</h6>
-                <h3 class="text-white mb-3">Special Offer</h3>
-                <a href="" class="btn btn-primary">Shop Now</a>
-            </div>
-        </div>
+        <BannerRightUp :ptag="arraypassing" />
+        <BannerRightUp ptag="Save 50%"/>
     </div>
 </template>
 
