@@ -5,7 +5,8 @@ import Women from '@/views/Women.vue';
 import Baby from '@/views/Baby.vue';
 import Blog from '@/views/Blog.vue';
 import Contact from '@/views/Contact.vue';
-import About from '@/views/About.vue'
+import Shop from '@/views/Shop.vue';
+import About from '../views/About.vue';
 
 
 const router = createRouter({
@@ -45,6 +46,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: Shop
     },
     {
       path: '/about',
