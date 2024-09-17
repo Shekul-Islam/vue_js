@@ -1,0 +1,23 @@
+<script setup>
+import BannerRightUp from './BannerRightUp.vue';
+
+
+</script>
+<template>
+    <div class="col-lg-4">
+        <BannerRightUp/>
+        <div class="product-offer mb-30" style="height: 200px;">
+            <img class="img-fluid" src="@/assets/img/offer-2.jpg" alt="">
+            <div class="offer-text">
+                <h6 class="text-white text-uppercase">Save 20%</h6>
+                <h3 class="text-white mb-3">Special Offer</h3>
+                <a href="" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<style scoped>
+
+</style>
