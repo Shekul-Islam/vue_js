@@ -1,5 +1,6 @@
 <script setup>
-import Category from '@/components/productcategories/Category.vue';
+import CategoryMain from '@/components/categories/CategoryMain.vue';
+import BannerSection from '@/components/banner/BannerSection.vue';
 
 var pic = {name: 'Product-Camera', image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fshopping-cart-ecommerce-icons-vector-24511000&psig=AOvVaw27SEPx1nppNkjTJFepE2Q2&ust=1726800327422000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODrxtT-zYgDFQAAAAAdAAAAABAS'}
 
@@ -10,7 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import BannerSection from '@/components/banner/BannerSection.vue';
+
 // import required modules
 import { Pagination,Autoplay, Navigation } from 'swiper/modules'
 
@@ -94,23 +95,7 @@ const modules = ref([Pagination,Autoplay]);
     <!-- Featured End -->
 
      <!-- Categories Start -->
-     <div class="container-fluid pt-5">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Categories</span></h2>
-        <div class="row px-xl-5 pb-3">
-           <Category/>
-           <Category :phototag="pic" />
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-           <Category/>
-        </div>
-    </div>
+     <CategoryMain/>
     <!-- Categories End -->
 
 
