@@ -1,5 +1,6 @@
 import Home from '@/views/Home.vue'
 import Shop from '@/views/Shop.vue'
+import Contact from '@/components/contact/Contact.vue'
 import ShopDetails from '@/views/ShopDetails.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/shop',
       name: 'shop',
       component: Shop
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     },
     {
       path: '/shop-details',
