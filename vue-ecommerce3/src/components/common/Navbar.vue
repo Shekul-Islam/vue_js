@@ -1,6 +1,10 @@
 
 <script setup>
 
+
+
+
+
 </script>
 
 <template>
@@ -48,14 +52,16 @@
                                 <a class="nav-item nav-link active"><RouterLink to="/home">Home</RouterLink></a>
                                 <a class="nav-item nav-link"><router-link to="/shop" >Shop</router-link></a>
                                 <a class="nav-item nav-link"><RouterLink to="/shop-details">Shop Detail</RouterLink></a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
-                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                        <a href="#" class="dropdown-item">Shopping Cart</a>
-                                        <a href="#" class="dropdown-item">Checkout</a>
+                                <div class="nav-item dropdown" @click="toggleDropdown" @mouseleave="closeDropdown">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                      Pages <i class="fa fa-angle-down mt-1"></i>
+                                    </a>
+                                    <div v-if="isDropdownOpen" class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                      <a href="#" class="dropdown-item">Shopping Cart</a>
+                                      <a href="#" class="dropdown-item">Checkout</a>
                                     </div>
-                                </div>
-                                <a  class="nav-item nav-link">Contact</a>
+                                  </div>
+                                <RouterLink to="/contact"  class="nav-item nav-link">Contact</RouterLink>
                             </div>
                             <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                                 <a href="" class="btn px-0">
@@ -76,5 +82,7 @@
 </template>
 
 <style scoped>
+
+
 
 </style>
