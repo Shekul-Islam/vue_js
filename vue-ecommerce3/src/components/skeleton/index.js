@@ -1,0 +1,1 @@
+export {default as HomeSliderSkeleton} from './HomeSliderSkeleton.vue';
