@@ -20,6 +20,7 @@ import Description from './Description.vue';
     display: flex;
     align-items: center;
     justify-content:  space-between;
+    height: 70vh;
     
 }
 

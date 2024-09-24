@@ -2,27 +2,30 @@
 import "skeleton-screen-css";
 import HomeSliderSkeleton from "../skeleton/HomeSliderSkeleton.vue";
 
-var img = {image: '@/assets/img/product-9.jpg'};
+var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
 </script>
 
 <template>
   
-    <template v-if="img?.image">
+   <div>
+   <div class="row px-xl-5">
+    <template v-if="img?.name">
       
-        <div 
-         v-for="(img, index) in img?.data"
-                  :key="index"
-        
-        >
-            <img src="@/assets/img/product-9.jpg" alt="">
-        </div>
-    </template>
+      <div>
+        <HomeSliderSkeleton/>
+    </div>
+  </template>
 
-    <template v-else>
-        <div>
-            <HomeSliderSkeleton/>
-        </div>
-    </template>
+  <template v-else>
+      <div>
+          <HomeSliderSkeleton/>
+      </div>
+  </template>
+   </div>
+   </div>
+
+
+
       
         <!-- Slider Skeleton -->
     <!-- <div class="slider-skeleton" style="height: 320px; width: 965px;">

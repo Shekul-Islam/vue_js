@@ -9,7 +9,7 @@
         <div class="ssc-line w-100"></div>
       </a> -->
       <!-- Slider Skeleton -->
-  <div class="slider-skeleton" style="height: 320px; width: 965px;">
+  <div class="slider-skeleton" style="">
     <!-- Slide 1 -->
     <div class="slide">
       <div class="slide-content">
@@ -38,6 +38,12 @@
   .ssc-square {
       width: 100%;
       height: 365px !important;
+  }
+
+  .slider-skeleton{
+
+    height: 320px; 
+    width: 965px;
   }
   </style>
   
