@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination,Autoplay, Navigation } from 'swiper/modules'
+import TopBanner from '@/components/top-banner/TopBanner.vue';
 
 const newSlide = ref([Navigation])
 const modules = ref([Pagination,Autoplay]);
@@ -26,6 +27,9 @@ const modules = ref([Pagination,Autoplay]);
 
 <template>
     <div>
+        <TopBanner/>
+     
+
           <!-- Carousel Start -->
         <BannerSection />
     <!-- Carousel End -->

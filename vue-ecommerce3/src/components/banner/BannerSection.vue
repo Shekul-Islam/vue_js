@@ -19,6 +19,6 @@ import BannerLeft from './BannerLeft.vue';
 
 
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
