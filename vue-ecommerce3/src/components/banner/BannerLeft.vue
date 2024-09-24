@@ -16,7 +16,7 @@ import HomeSliderSkeleton from '@/components/skeleton/HomeSliderSkeleton.vue';
 const newSlide = ref([Navigation])
 const modules = ref([Pagination,Autoplay]);
 
-var sliders = { image1: ''}
+var sliders = { image1: '@/assets/img/carousel-1.jpg'}
 </script>
 <template>
     <div class="col-lg-8">
