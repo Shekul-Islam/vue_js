@@ -4,10 +4,10 @@
 
 <template>
     <div>
-      <!-- <a href="#">
-        <img src="@/assets/images/banner/loading.jpg" alt="" />
-        <div class="ssc-line w-100"></div>
-      </a> -->
+      <a href="#">
+        <!-- <img src="@/assets/images/banner/loading.jpg" alt="" /> -->
+        
+      </a>
       <!-- Slider Skeleton -->
   <div class="slider-skeleton" style="">
     <!-- Slide 1 -->
@@ -22,7 +22,7 @@
           <div class="ssc-head-line w-50"></div>
         </div> -->
       </div>
-      <div class="ssc-hr"></div>
+      
       <!-- More content for the slide -->
     </div>
     <!-- More slides -->
@@ -36,14 +36,14 @@
   }
   
   .ssc-square {
-      width: 100%;
-      height: 365px !important;
+      width: 60%;
+      height: 280px !important;
   }
 
   .slider-skeleton{
 
     height: 320px; 
-    width: 965px;
+    width: 495px;
   }
   </style>
   

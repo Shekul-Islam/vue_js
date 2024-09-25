@@ -7,7 +7,7 @@ var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
 
 <template>
   
-   <div>
+   
    <div class="row px-xl-5">
     <template v-if="img?.name">
       
@@ -22,7 +22,7 @@ var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
       </div>
   </template>
    </div>
-   </div>
+  
 
 
 
@@ -52,7 +52,12 @@ var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
   
   .ssc-square {
       width: 100%;
-      height: 365px !important;
+      height: 280px !important;
   }
 
+  .slider-skeleton{
+
+    height: 320px; 
+    width: 495px;
+  }
 </style>

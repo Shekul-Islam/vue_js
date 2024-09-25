@@ -24,4 +24,5 @@ import Description from './Description.vue';
     
 }
 
+
 </style>
