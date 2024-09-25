@@ -6,8 +6,8 @@ import Description from './Description.vue';
 
 <template>
     <div class="container">
-        <Banner />
-        <Description />
+       <div><Banner /></div>
+        <div><Description /></div>
     </div>
 </template>
 
@@ -16,10 +16,17 @@ import Description from './Description.vue';
 
 .container { 
     display: flex;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     
+}
+
+.container div{
+    width: 100px;
+    height: 200px;
+    gap: 10px;
+
 }
 
 

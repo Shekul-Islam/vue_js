@@ -28,14 +28,14 @@
  
   
   .ssc-square {
-    width: 95%;
+    width: 200px;
     height: 29rem !important;
   }
 
   .slider-skeleton{
 
     height: 320px; 
-    width: 595px;
+    width: 200px;
   }
   </style>
   

@@ -8,7 +8,7 @@ var banner = { image1: '@/assets/img/bannertop.jpg'}
 <template>
   
    
-   <div class="row px-xl-5">
+   <div >
     <template v-if="banner?.image1">
       
         <div>
