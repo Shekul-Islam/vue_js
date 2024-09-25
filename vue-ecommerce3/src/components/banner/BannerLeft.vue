@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import BannerSection from '@/components/banner/BannerSection.vue';
 // import required modules
 import { Pagination,Autoplay, Navigation } from 'swiper/modules';
-import HomeSliderSkeleton from '@/components/skeleton/HomeSliderSkeleton.vue';
+import SliderSkeleton from '@/components/skeleton/SliderSkeleton.vue';
 
 
 const newSlide = ref([Navigation])
@@ -71,7 +71,7 @@ var sliders = { image1: '@/assets/img/carousel-1.jpg', image2: '@/assets/img/car
                   </swiper>
                  </template>
                  <template v-else>
-                    <HomeSliderSkeleton />
+                    <SliderSkeleton />
                 </template>
                 
             </div>

@@ -1,24 +1,27 @@
 <script setup>
 import "skeleton-screen-css";
-import HomeSliderSkeleton from "../skeleton/HomeSliderSkeleton.vue";
+import SliderSkeleton from "../skeleton/SliderSkeleton.vue";
 
-var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
+var banner = { image1: '@/assets/img/bannertop.jpg'}
 </script>
 
 <template>
   
    
    <div class="row px-xl-5">
-    <template v-if="img?.name">
+    <template v-if="banner?.image1">
       
-      <div>
-        <HomeSliderSkeleton/>
-    </div>
+        <div>
+          <img src="@/assets/img/bannertop.jpg" alt="" style="width: 100%">
+        </div>
+      
+     
   </template>
+  
 
   <template v-else>
       <div>
-          <HomeSliderSkeleton/>
+          <SliderSkeleton/>
       </div>
   </template>
    </div>
@@ -46,18 +49,5 @@ var img = {name: "Top Banner", image: '@/assets/img/product-9.jpg'};
 
 <style scoped>
 
-.slide-content{
-    border-radius: 5px !important;
-  }
-  
-  .ssc-square {
-      width: 100%;
-      height: 280px !important;
-  }
 
-  .slider-skeleton{
-
-    height: 320px; 
-    width: 495px;
-  }
 </style>

@@ -1,1 +1,2 @@
-export {default as HomeSliderSkeleton} from './HomeSliderSkeleton.vue';
+export {default as SliderSkeleton} from './SliderSkeleton.vue';
+export {default as DescriptionSkeleton} from './DescriptionSkeleton.vue';

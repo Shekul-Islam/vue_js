@@ -5,24 +5,24 @@ import Description from './Description.vue';
 </script>
 
 <template>
-    <div class="container topbanner">
-        <div><Banner/></div>
-        <div><Description/></div>
+    <div class="container">
+        <Banner />
+        <Description />
     </div>
 </template>
 
 
 <style scoped>
 
-.topbanner {
-
-    width: 100%;
+.container { 
     display: flex;
-    align-items: center;
-    justify-content:  space-between;
-    height: 70vh;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
     
 }
+
+
 
 
 </style>
