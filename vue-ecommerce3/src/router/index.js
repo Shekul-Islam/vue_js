@@ -3,6 +3,7 @@ import Shop from '@/views/Shop.vue'
 import Contact from '@/components/contact/Contact.vue'
 import ShopDetails from '@/views/ShopDetails.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import Skeleton from '@/views/Skeleton.vue'
 
 
 const router = createRouter({
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/skeleton',
+      name: 'skeleton',
+      component: Skeleton
     },
     {
       path: '/shop-details',

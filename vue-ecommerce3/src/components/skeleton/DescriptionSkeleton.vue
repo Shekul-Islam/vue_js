@@ -7,13 +7,19 @@
     <!-- Slide 1 -->
     
       <div>
-        <div class="ssc-line mb-2"></div>
+        <div class="ssc-head-line mb-3"></div>
+        <div class="ssc-line mb-2 w-50"></div>
+        <div class="ssc-line mb-2 w-75"></div>
+        <div class="ssc-line mb-2 w-25"></div>
+        <div class="ssc-line mb-2 w-100"></div>
+        <div class="ssc-line mb-2 w-100"></div>
+        <div class="ssc-head-line w-25 mb-2"></div>
         <div >
-          <div class="w-40">
-            <div class="ssc-line mb-2"></div>
-            <div class="ssc-line mb-2"></div>
+         
+          <div style="display: flex; gap: 7px">
+            <div class="ssc-head-line w-25 mb-2 "></div>
+            <div class="ssc-head-line w-25 mb-2"></div>
           </div>
-          <div class="ssc-head-line w-50 mb-2"></div>
         </div>
       
       
@@ -26,7 +32,19 @@
 
 <style scoped>
 
+.slider-skeleton{
+  height: 320px;
+  width: 418px;
+}
 
+
+@media (max-width: 768px) {
+  .slider-skeleton {
+    height: 320px;
+    width: 287px;
+  }
+
+}
 
 
 </style>

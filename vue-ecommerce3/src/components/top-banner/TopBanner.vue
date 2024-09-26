@@ -18,14 +18,30 @@ import Description from './Description.vue';
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 60px;
+
+
+    padding-bottom: 30px;
+   
 }
 
-.container div{
-    display: contents;
-    width: 100px;
-    height: 500px;
-}
+
+@media (max-width: 1024px) {
+    .container{
+        gap: 6px;
+    }
+  
+  }
+
+@media (max-width: 426px) {
+    .container { 
+        display: flex;
+        flex-direction: column;
+    }
+  
+  }
+
+
 
 
 </style>

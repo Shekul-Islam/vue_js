@@ -2,7 +2,7 @@
 import "skeleton-screen-css";
 import SliderSkeleton from "../skeleton/SliderSkeleton.vue";
 
-var banner = { image1: ''}
+// var banner = { image1: '@/assets/img/bannertop.jpg'}
 </script>
 
 <template>
@@ -12,7 +12,7 @@ var banner = { image1: ''}
     <template v-if="banner?.image1">
       
         <div>
-          <img src="" alt="" style="width: 100%">
+          <img src="@/assets/img/bannertop.jpg" alt="" style="width: 600px ; height: 400px">
         </div>
       
      
