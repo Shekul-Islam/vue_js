@@ -3,11 +3,8 @@
 </script>
 
 <template>
-    <div>
-      <a href="#">
-        <!-- <img src="@/assets/images/banner/loading.jpg" alt="" /> -->
-        
-      </a>
+  
+     
       <!-- Slider Skeleton -->
   <div class="slider-skeleton" style="">
     <!-- Slide 1 -->
@@ -21,7 +18,7 @@
     </div>
     <!-- More slides -->
   </div>
-    </div>
+    
   </template>
   
   <style>
@@ -29,7 +26,8 @@
   
   .ssc-square {
     width: 200px;
-    height: 29rem !important;
+    height: 18rem !important;
+    gap: 10px;
   }
 
   .slider-skeleton{

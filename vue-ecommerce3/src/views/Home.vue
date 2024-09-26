@@ -2,6 +2,7 @@
 import CategoryMain from '@/components/categories/CategoryMain.vue';
 import BannerSection from '@/components/banner/BannerSection.vue';
 import FeaturedProducts from '@/components/products/FeaturedProducts.vue';
+import TopBanner from '@/components/top-banner/TopBanner.vue';
 
 var pic = {name: 'Product-Camera', image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fshopping-cart-ecommerce-icons-vector-24511000&psig=AOvVaw27SEPx1nppNkjTJFepE2Q2&ust=1726800327422000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODrxtT-zYgDFQAAAAAdAAAAABAS'}
 
@@ -15,7 +16,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination,Autoplay, Navigation } from 'swiper/modules'
-import TopBanner from '@/components/top-banner/TopBanner.vue';
+
 
 const newSlide = ref([Navigation])
 const modules = ref([Pagination,Autoplay]);
@@ -28,8 +29,7 @@ const modules = ref([Pagination,Autoplay]);
 <template>
     <div>
         <TopBanner/>
-     
-
+    
           <!-- Carousel Start -->
         <BannerSection />
     <!-- Carousel End -->

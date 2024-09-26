@@ -62,6 +62,8 @@
                                     </div>
                                   </div>
                                 <RouterLink to="/contact"  class="nav-item nav-link">Contact</RouterLink>
+                                <RouterLink to="/skeleton"  class="nav-item nav-link">Skeleton</RouterLink>
+                                
                             </div>
                             <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                                 <a href="" class="btn px-0">

@@ -19,17 +19,13 @@ import Description from './Description.vue';
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .container div{
+    display: contents;
     width: 100px;
-    height: 200px;
-    gap: 10px;
-
+    height: 500px;
 }
-
-
 
 
 </style>
