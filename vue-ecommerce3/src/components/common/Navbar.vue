@@ -61,8 +61,9 @@
                                       <a href="#" class="dropdown-item">Checkout</a>
                                     </div>
                                   </div>
-                                <RouterLink to="/contact"  class="nav-item nav-link">Contact</RouterLink>
-                                <RouterLink to="/skeleton"  class="nav-item nav-link">Skeleton</RouterLink>
+                                <a  class="nav-item nav-link"><RouterLink to="/contact">Contact</RouterLink></a>
+                                <a  class="nav-item nav-link"><RouterLink to="/skeleton">Skeleton</RouterLink></a>
+                                <a class="nav-item nav-link"><RouterLink to="/vmodel">Vmodel</RouterLink></a>
                                 
                             </div>
                             <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
