@@ -5,6 +5,7 @@ import ShopDetails from '@/views/ShopDetails.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import Skeleton from '@/views/Skeleton.vue'
 import Vmodel from '@/views/Vmodel.vue'
+import RouterPush from '@/views/RouterPush.vue'
 
 
 const router = createRouter({
@@ -37,6 +38,11 @@ const router = createRouter({
       path: '/vmodel',
       name: 'vmodel',
       component: Vmodel
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: RouterPush
     },
     {
       path: '/shop-details',
