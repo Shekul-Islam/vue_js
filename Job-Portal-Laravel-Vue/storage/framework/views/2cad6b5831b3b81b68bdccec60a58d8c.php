@@ -7,11 +7,9 @@
         <nav class="navbar navbar-expand-lg navbar-bg">
           
           <div class="brand-logo">
-            <a class="navbar-brand" href="{{ url('/') }}" id="menu-action">
-              {{-- <div class="user-photo d-desktop">
-                <img src="../../frontend/images/meprofile.jpg" alt="">
-              </div> --}}
-              <span>{{ config('app.adminName', 'JobBoard Admin Pannel') }}</span>
+            <a class="navbar-brand" href="<?php echo e(url('/')); ?>" id="menu-action">
+              
+              <span><?php echo e(config('app.adminName', 'JobBoard Admin Pannel')); ?></span>
             </a>    
 
            
@@ -34,7 +32,7 @@
               <!--   For Toggle Mobile Nav Icon -->
 
           <div class="collapse navbar-collapse pr-3" id="#">
-            @if (Auth::check())
+            <?php if(Auth::check()): ?>
             <ul class="navbar-nav user-info ml-auto mt-2 mt-lg-0">
               <li class="nav-item dropdown show">
                 <a href="#" class="navbar-nav-link dropdown-toggle text-light" data-toggle="dropdown" aria-expanded="true">
@@ -43,7 +41,8 @@
                   </div>
 
                   
-                      {{ Str::ucfirst(Auth::user()->name) }}
+                      <?php echo e(Str::ucfirst(Auth::user()->name)); ?>
+
                   
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -56,17 +55,17 @@
                  
 
 
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+                  <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                   onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"><i class="material-icons">exit_to_app</i>{{ __('Logout') }}</a>
+                                document.getElementById('logout-form').submit();"><i class="material-icons">exit_to_app</i><?php echo e(__('Logout')); ?></a>
 
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                      @csrf
+                  <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                      <?php echo csrf_field(); ?>
                   </form>
                 </div>
               </li>
             </ul>
-            @endif
+            <?php endif; ?>
           </div>
 
 
@@ -83,15 +82,15 @@
                     </i>
                   Account Settings
                 </a></li>
-          <li><a href="{{ route('logout') }}"
+          <li><a href="<?php echo e(route('logout')); ?>"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();"><i class="material-icons mr-2">exit_to_app</i>Logout</a></li>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
+                  <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                    <?php echo csrf_field(); ?>
                 </form>
         </ul>
       </div>
     <!--   For Toggle Mobile Nav -->
     </div>  
 </header>
-<!--====== End Header Section======-->
+<!--====== End Header Section======--><?php /**PATH E:\xampp\htdocs\Vue.js\Job-Portal-Laravel-Vue\resources\views////admin/partials/navbar.blade.php ENDPATH**/ ?>
