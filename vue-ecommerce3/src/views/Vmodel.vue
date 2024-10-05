@@ -28,8 +28,8 @@
 export default {
   data (){
     return {
-      name1: "Raju",
-    name2: "Sheheen",
+      name1: "Jakir",
+    name2: "Mamun",
     }
   },
 
@@ -41,8 +41,8 @@ export default {
   },
 
   mounted() {
-    this.changeFunction();
-
+    // this.changeFunction();
+this.name2 = "Albab";
   },
 
 };
