@@ -23,7 +23,7 @@ const modules = ref([Pagination,Autoplay]);
              
             <swiper
             
-            :slidesPerView="3"
+            :slidesPerView="5"
             :sliderPerGroup="1"
             :loop="true"
             :pagination="{
