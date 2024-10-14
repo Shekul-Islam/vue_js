@@ -15,11 +15,11 @@
                                     <RouterLink :to="{name: 'home'}" class="navbar-link dropdown-arrow">home</RouterLink>
                                 
                                 <ul class="dropdown-position-list">
-                                    <li><RouterLink to="/classic">Home grid</RouterLink></li>
-                                    <li><a href="index.html">Home index</a></li>
-                                    <li><RouterLink :to="{name: 'classic'}">Home classic</RouterLink></li>
-                                    <li><a href="home-standard.html">Home standard</a></li>
-                                    <li><a>Home category</a></li>
+                                    <li><RouterLink :to="{name: 'grid'}">Home Grid</RouterLink></li>
+                                    <li><RouterLink :to="{name: 'index'}">Home Index</RouterLink></li>
+                                    <li><RouterLink :to="{name: 'classic'}">Home Classic</RouterLink></li>
+                                    <li><RouterLink :to="{name: 'standard'}" >Home Standard</RouterLink></li>
+                                    <li><RouterLink :to="{name: 'category'}">Home Category</RouterLink></li>
                                 </ul>
                             </li>
                             <li class="navbar-item dropdown-megamenu">

@@ -50,6 +50,7 @@ export default {
               <swiper
               :modules="modules"
     :slides-per-view="2"
+    :loop="true"
     :space-between="50"
     navigation
     :pagination="{ clickable: true }"

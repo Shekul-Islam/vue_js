@@ -40,6 +40,8 @@ const modules = ref([Pagination, Autoplay]);
                 }"
                 :modules="modules"
                 class="mySwiper"
+
+                
               >
                 <SwiperSlide>
                   <li>
