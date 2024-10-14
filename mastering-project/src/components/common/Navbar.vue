@@ -1,5 +1,6 @@
 <script setup>
 
+
 </script>
 
 <template>
@@ -11,17 +12,18 @@
                     <div class="navbar-content">
                         <ul class="navbar-list">
                             <li class="navbar-item dropdown">
-                                <a class="navbar-link dropdown-arrow" href="#">home</a>
+                                    <RouterLink :to="{name: 'home'}" class="navbar-link dropdown-arrow">home</RouterLink>
+                                
                                 <ul class="dropdown-position-list">
-                                    <li><a href="home-grid.html">Home grid</a></li>
+                                    <li><RouterLink to="/classic">Home grid</RouterLink></li>
                                     <li><a href="index.html">Home index</a></li>
-                                    <li><a href="home-classic.html">Home classic</a></li>
+                                    <li><RouterLink :to="{name: 'classic'}">Home classic</RouterLink></li>
                                     <li><a href="home-standard.html">Home standard</a></li>
-                                    <li><a href="home-category.html">Home category</a></li>
+                                    <li><a>Home category</a></li>
                                 </ul>
                             </li>
                             <li class="navbar-item dropdown-megamenu">
-                                <a class="navbar-link dropdown-arrow" href="#">shop</a>
+                                <RouterLink :to="{name: 'classic'}" class="navbar-link dropdown-arrow" href="#">shop</RouterLink>
                                 <div class="megamenu">
                                     <div class="container">
                                         <div class="row">

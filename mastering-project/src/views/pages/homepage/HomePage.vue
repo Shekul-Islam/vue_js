@@ -1,61 +1,33 @@
 <script setup>
-import Topbar from './components/common/Topbar.vue';
-import Header from './components/common/Header.vue';
-import Navbar from './components/common/Navbar.vue';
-import Footer from './components/common/Footer.vue';
-import CategorySidebar from './components/CategorySidebar.vue';
-import CartSidebar from './components/CartSidebar.vue';
-import NavSidebar from './components/NavSidebar.vue';
-import MobileMenu from './components/MobileMenu.vue';
-import ProductView from './components/ProductView.vue';
-import Banner from './components/Banner.vue';
-import Suggest from './components/Suggest.vue';
-import Recent from './components/Recent.vue';
-import Promotion from './components/Promotion.vue';
-import Featured from './components/Featured.vue';
-import Countdown from './components/Countdown.vue';
-import NewItem from './components/NewItem.vue';
-import Niche from './components/Niche.vue';
-import Brand from './components/Brand.vue';
-import Testimonial from './components/Testimonial.vue';
-import Blog from './components/Blog.vue';
-import Newsletter from './components/Newsletter.vue';
-import Intro from './components/Intro.vue';
-
+import CategorySidebar from '@/components/home/CategorySidebar.vue';
+import CartSidebar from '@/components/home/CartSidebar.vue';
+import NavSidebar from '@/components/home/NavSidebar.vue';
+import MobileMenu from '@/components/home/MobileMenu.vue';
+import ProductView from '@/components/home/ProductView.vue';
+import Banner from '@/components/home/Banner.vue';
+import Suggest from '@/components/home/Suggest.vue';
+import Recent from '@/components/home/Recent.vue';
+import Promotion from '@/components/home/Promotion.vue';
+import Featured from '@/components/home/Featured.vue';
+import Countdown from '@/components/home/Countdown.vue';
+import NewItem from '@/components/home/NewItem.vue';
+import Niche from '@/components/home/Niche.vue';
+import Brand from '@/components/home/Brand.vue';
+import Testimonial from '@/components/home/Testimonial.vue';
+import Blog from '@/components/home/Blog.vue';
+import Newsletter from '@/components/home/Newsletter.vue';
+import Intro from '@/components/home/Intro.vue';
 </script>
-
-
 <template>
-  <div>
-    <div class="backdrop"></div>
-    <a class="backtop fas fa-arrow-up" href="#"></a>
-    
-    <!--=====================================
-                HEADER TOP PART START
-    =======================================-->
-   <Topbar/>
-    <!--=====================================
-                HEADER TOP PART END 
-    =======================================-->
+ <div>
 
-    <!--=====================================
-                HEADER PART START
+   <!--=====================================
+            CATEGORY SIDEBAR PART START
     =======================================-->
-   <Header/>
+    <CategorySidebar/>
     <!--=====================================
-                HEADER PART END
+            CATEGORY SIDEBAR PART END
     =======================================-->
-
-    <!--=====================================
-                NAVBAR PART START
-    =======================================-->
-   <Navbar/>
-    <!--=====================================
-                NAVBAR PART END
-    =======================================-->
-
-
-
 
 
     <!--=====================================
@@ -93,8 +65,7 @@ import Intro from './components/Intro.vue';
                 PRODUCT VIEW END
     =======================================-->
 
-
-    <!--=====================================
+   <!--=====================================
                 BANNER PART START
     =======================================-->
     <Banner/>
@@ -218,17 +189,7 @@ import Intro from './components/Intro.vue';
     <!--=====================================
                 INTRO PART END
     =======================================-->
-  <router-view></router-view>
-
-
-    <!--=====================================
-                 FOOTER PART START
-    =======================================-->
-   <Footer/>
-    <!--=====================================
-                  FOOTER PART END
-    =======================================-->
-  </div>
+ </div>
 </template>
 
 
