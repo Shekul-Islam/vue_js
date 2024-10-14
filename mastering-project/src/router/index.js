@@ -1,4 +1,9 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
+import Classic from '@/views/home/Classic.vue'
+import HomePage from '@/views/pages/homepage/HomePage.vue'
+
+
 
 
 const router = createRouter({
@@ -7,16 +12,19 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      
+      component: HomePage
+    },
+
+    {
+      path: '/classic',
+      name: 'classic',
+      component: Classic
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      
-    }
+      path: '/shop-albab',
+      name: 'albab',
+      component: Classic
+    },
   ]
 })
 
