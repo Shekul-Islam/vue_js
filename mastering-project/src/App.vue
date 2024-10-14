@@ -17,7 +17,7 @@ import Countdown from './components/Countdown.vue';
 import NewItem from './components/NewItem.vue';
 import Niche from './components/Niche.vue';
 import Brand from './components/Brand.vue';
-import Testimonial from './components/Testimonial.vue';
+import Testimonial from './components/home/Testimonial.vue';
 import Blog from './components/Blog.vue';
 import Newsletter from './components/Newsletter.vue';
 import Intro from './components/Intro.vue';
