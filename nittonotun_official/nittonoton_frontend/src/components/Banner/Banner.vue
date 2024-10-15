@@ -11,9 +11,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination,Autoplay, Navigation } from 'swiper/modules'
 
-// slider get data 
+// slider get data
 import { storeToRefs } from 'pinia';
-// slider data fetch 
+// slider data fetch
 import {useSlider, useCategory, useBanner} from '@/stores'
 
 
@@ -24,13 +24,13 @@ const modules = ref([Pagination,Autoplay]);
 // banner part start
 const banner = useBanner();
 const banner1 = ref(''); 
-const banner2 = ref(''); 
+const banner2 = ref('');
 // banner part end
 
-// slider data fetch 
+// slider data fetch
 const slider = useSlider();
 const {sliders} = storeToRefs(slider)
-// category data fetch 
+// category data fetch
 const category = useCategory();
 const {categories} = storeToRefs(category)
 
