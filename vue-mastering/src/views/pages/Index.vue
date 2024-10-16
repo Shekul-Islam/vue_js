@@ -1,5 +1,9 @@
 <script setup>
-
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 </script>
 <template>
   <div>
@@ -8,15 +12,26 @@
         <div class="row">
           <div class="col-lg-12 order-0 order-lg-1 order-xl-1">
             <div class="home-grid-slider slider-arrow slider-dots">
-              <a href="#"><img src="@/assets/images/banner/01.jfif" alt="" /></a><a href="#"><img src="@/assets/images/banner/02.jfif"
-                  alt="" /></a>
-              <a href="#"><img src="@/assets/images/banner/03.jfif" alt="" /></a>
+              <swiper
+              :slidesPerView="1"
+              :spaceBetween="30"
+              :autoplay="{ delay: 3000, disableOnInteraction: false }"
+              :loop="true"
+              :pagination="{ clickable: true }"
+              :navigation="true"
+              :modules="[Pagination, Navigation]"
+              class="mySwiper"
+              >
+                <swiper-slide><img src="@/assets/images/banner/01.jfif" alt=""/></swiper-slide>
+                <swiper-slide><img src="@/assets/images/banner/02.jfif" alt=""/></swiper-slide>
+                <swiper-slide><img src="@/assets/images/banner/03.jfif" alt=""/></swiper-slide>
+              </swiper>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section class="section suggest-part">
       <div class="container">
         <div class="row">
@@ -26,7 +41,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
           <div class="col">
             <div class="product-card">
@@ -37,11 +52,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -51,11 +66,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -65,11 +80,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -79,11 +94,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -93,11 +108,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -107,11 +122,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -121,11 +136,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -135,11 +150,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -149,11 +164,11 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <ul>
@@ -163,14 +178,14 @@
                   </a>
                 </li>
               </ul>
-  
+
               <h6 class="text-center mt-2">category name</h6>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section class="section recent-part">
       <div class="container">
         <div class="row">
@@ -188,8 +203,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/01.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/01.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -204,7 +221,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -213,8 +230,10 @@
                   <label class="view-label off">-2%</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/03.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/03.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -229,7 +248,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -237,8 +256,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -253,7 +274,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -261,8 +282,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/04.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/04.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -277,7 +300,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -285,8 +308,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/05.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/05.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -301,7 +326,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -309,8 +334,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/11.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/11.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -325,7 +352,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -333,8 +360,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -349,7 +378,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -357,8 +386,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/06.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/06.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -373,7 +404,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -381,8 +412,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/08.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/08.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -397,7 +430,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -405,8 +438,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/09.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/09.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -425,13 +460,15 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="section-btn-25">
-              <a href="shop-4column.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>show more</span></a>
+              <a href="shop-4column.html" class="btn btn-outline"
+                ><i class="fas fa-eye"></i><span>show more</span></a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section class="section recent-part">
       <div class="container">
         <div class="row">
@@ -449,8 +486,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/01.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/01.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -465,7 +504,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -474,8 +513,10 @@
                   <label class="view-label off">-2%</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/03.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/03.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -490,7 +531,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -498,8 +539,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -514,7 +557,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -522,8 +565,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/04.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/04.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -538,7 +583,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -546,8 +591,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/05.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/05.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -562,7 +609,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -570,8 +617,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/11.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/11.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -586,7 +635,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -594,8 +643,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -610,7 +661,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -618,8 +669,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/06.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/06.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -634,7 +687,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -642,8 +695,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/08.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/08.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -658,7 +713,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -666,8 +721,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/09.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/09.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -686,13 +743,15 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="section-btn-25">
-              <a href="shop-4column.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>show more</span></a>
+              <a href="shop-4column.html" class="btn btn-outline"
+                ><i class="fas fa-eye"></i><span>show more</span></a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section class="section recent-part">
       <div class="container">
         <div class="row">
@@ -710,8 +769,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/01.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/01.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -726,7 +787,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -735,8 +796,10 @@
                   <label class="view-label off">-2%</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/03.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/03.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -751,7 +814,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -759,8 +822,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -775,7 +840,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -783,8 +848,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/04.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/04.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -799,7 +866,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -807,8 +874,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/05.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/05.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -823,7 +892,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -831,8 +900,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/11.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/11.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -847,7 +918,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -855,8 +926,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/02.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/02.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -871,7 +944,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -879,8 +952,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/06.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/06.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -895,7 +970,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -903,8 +978,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/08.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/08.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -919,7 +996,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="col">
             <div class="product-card">
               <div class="product-media">
@@ -927,8 +1004,10 @@
                   <label class="label-text sale">sale</label>
                 </div>
                 <button class="product-wish wish">
-                  <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                    src="@/assets/images/product/09.jpg" alt="product" /></a>
+                  <i class="fas fa-heart"></i></button
+                ><a class="product-image" href="product-video.html"
+                  ><img src="@/assets/images/product/09.jpg" alt="product"
+                /></a>
               </div>
               <div class="product-content">
                 <h6 class="product-name">
@@ -947,13 +1026,15 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="section-btn-25">
-              <a href="shop-4column.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>show more</span></a>
+              <a href="shop-4column.html" class="btn btn-outline"
+                ><i class="fas fa-eye"></i><span>show more</span></a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section class="section newitem-part">
       <div class="container">
         <div class="row">
@@ -973,8 +1054,10 @@
                       <label class="label-text new">New</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/01.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/01.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -989,7 +1072,7 @@
                   </div>
                 </div>
               </li>
-  
+
               <li>
                 <div class="product-card">
                   <div class="product-media">
@@ -997,8 +1080,10 @@
                       <label class="label-text new">New</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/05.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/05.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -1013,7 +1098,7 @@
                   </div>
                 </div>
               </li>
-  
+
               <li>
                 <div class="product-card">
                   <div class="product-media">
@@ -1021,8 +1106,10 @@
                       <label class="label-text sale">sale</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/07.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/07.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -1037,7 +1124,7 @@
                   </div>
                 </div>
               </li>
-  
+
               <li>
                 <div class="product-card">
                   <div class="product-media">
@@ -1045,8 +1132,10 @@
                       <label class="label-text sale">sale</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/01.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/01.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -1061,7 +1150,7 @@
                   </div>
                 </div>
               </li>
-  
+
               <li>
                 <div class="product-card">
                   <div class="product-media">
@@ -1069,8 +1158,10 @@
                       <label class="label-text sale">sale</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/06.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/06.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -1085,7 +1176,7 @@
                   </div>
                 </div>
               </li>
-  
+
               <li>
                 <div class="product-card">
                   <div class="product-media">
@@ -1093,8 +1184,10 @@
                       <label class="label-text sale">sale</label>
                     </div>
                     <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
-                        src="@/assets/images/product/04.jpg" alt="product" /></a>
+                      <i class="fas fa-heart"></i></button
+                    ><a class="product-image" href="product-video.html"
+                      ><img src="@/assets/images/product/04.jpg" alt="product"
+                    /></a>
                   </div>
                   <div class="product-content">
                     <h6 class="product-name">
@@ -1115,7 +1208,9 @@
         <div class="row">
           <div class="col">
             <div class="section-btn-25">
-              <a href="shop-4column.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>show more</span></a>
+              <a href="shop-4column.html" class="btn btn-outline"
+                ><i class="fas fa-eye"></i><span>show more</span></a
+              >
             </div>
           </div>
         </div>
@@ -1124,7 +1219,4 @@
   </div>
 </template>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
