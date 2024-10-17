@@ -1,5 +1,12 @@
 <script setup>
 
+function cateClose() {
+        $("body").css("overflow", "inherit"),
+          $(".category-sidebar").removeClass("active"),
+          $(".backdrop").fadeOut();
+      
+}
+
 </script>
 
 <template>
@@ -9,7 +16,7 @@
         <h4 class="category-title">
           <i class="fas fa-align-left"></i><span>categories</span>
         </h4>
-        <button class="category-close"><i class="icofont-close"></i></button>
+        <button class="category-close" @click="cateClose"><i class="icofont-close"></i></button>
       </div>
       <ul class="category-list">
         <li class="category-item">

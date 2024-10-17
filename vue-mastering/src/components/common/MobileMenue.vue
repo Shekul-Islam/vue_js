@@ -1,5 +1,26 @@
 <script setup>
 
+// function closeMenu() {
+//   $("body").css("overflow", "inherit");
+//   $(".nav-sidebar").removeClass("active");
+//   $(".backdrop").fadeOut();
+// }
+
+ 
+function cartBtn() {
+  $("body").css("overflow", "hidden"),
+      $(".cart-sidebar").addClass("active");
+     
+     
+}
+
+function cateBtn() {
+  $("body").css("overflow", "hidden"),
+      $(".category-sidebar").addClass("active");
+    
+
+}
+
 </script>
 
 <template>
@@ -12,10 +33,10 @@
         aria-current="page"
         ><i class="fas fa-home"></i><span>Home</span></a
       >
-      <button class="cate-btn" title="Category List">
+      <button class="cate-btn" @click="cateBtn" title="Category List">
         <i class="fas fa-list"></i><span>category</span>
       </button>
-      <button class="cart-btn" title="Cartlist">
+      <button class="cart-btn" @click="cartBtn" title="Cartlist">
         <i class="fas fa-shopping-basket"></i><span>Cart</span><sup>2</sup>
       </button>
       <a href="/my-wishist" class="" title="Wishlist"

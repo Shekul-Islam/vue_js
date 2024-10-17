@@ -22,7 +22,7 @@ function closeMenu() {
       <div class="nav-content">
         <ul class="nav-list">
           <li>
-            <a href="#" class="nav-link"><i class="icofont-home"></i>Home</a>
+            <router-link :to="{name: 'index'}" class="nav-link"><i class="icofont-home"></i>Home</router-link>
           </li>
 
           <li>

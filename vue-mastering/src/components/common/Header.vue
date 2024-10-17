@@ -6,11 +6,16 @@ function search() {
 
 
 function menu() {
-    $("body").css("overflow", "hidden"),
-      $(".nav-sidebar").addClass("active");
+    $("body").css("overflow", "hidden"), $(".nav-sidebar").addClass("active");
    
 }
 
+
+function cartShow() {
+  $("body").css("overflow", "hidden"),
+      $(".cart-sidebar").addClass("active");
+     
+}
 
 
 </script>
@@ -56,7 +61,7 @@ function menu() {
 
             <a href="wishlist.html" class="header-widget" title="Wishlist"
               ><i class="fas fa-heart"></i><sup>0</sup></a
-            ><button class="header-widget header-cart" title="Cartlist">
+            ><button class="header-widget header-cart" @click="cartShow" title="Cartlist">
               <i class="fas fa-shopping-basket"></i><sup>9+</sup
               ><span>total price<small>$345.00</small></span>
             </button>
