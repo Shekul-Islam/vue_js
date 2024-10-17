@@ -1,13 +1,23 @@
 <script setup>
 
+
+
+import $ from 'jquery';
+
+// Function to close the menu
+function closeMenu() {
+  $("body").css("overflow", "inherit");
+  $(".nav-sidebar").removeClass("active");
+  $(".backdrop").fadeOut();
+}
 </script>
 
 <template>
   <div>
     <aside class="nav-sidebar">
       <div class="nav-header">
-        <a href="#"><img src="./assets/images/logo.png" alt="logo" /></a
-        ><button class="nav-close"><i class="icofont-close"></i></button>
+        <a href="#"><img src="@/assets/images/logo.png" alt="logo" /></a
+        ><button class="nav-close" @click="closeMenu"><i class="icofont-close"></i></button>
       </div>
       <div class="nav-content">
         <ul class="nav-list">
