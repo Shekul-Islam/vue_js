@@ -1,14 +1,21 @@
-<script setup></script>
+<script setup>
+// import { provide } from 'vue';
+
+const bannerImage = new URL('@/assets/images/single-banner.jpg', import.meta.url).href;
+
+// provide('bannerImage', bannerImage);
+
+</script>
 
 <template>
   <div>
     <section
-      class="inner-section single-banner"
-      style="
-        background: url('//website/images/single-banner.jpg') center center
-          no-repeat;
-      "
-    >
+    class="inner-section single-banner"
+    :style="{
+      background: 'url(' + bannerImage + ') center center no-repeat'
+    }"
+  >
+  
       <div class="container"><h2>Seller List</h2></div>
     </section>
     <section class="inner-section">

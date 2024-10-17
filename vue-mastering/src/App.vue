@@ -10,6 +10,12 @@ import ModalFade from './components/common/ModalFade.vue';
 import NewsPart from './components/common/NewsPart.vue';
 import IntroPart from './components/common/IntroPart.vue';
 import Footer from './components/common/Footer.vue';
+import { useRoute } from 'vue-router';
+import Register from './views/pages/Register.vue';
+
+
+const route = useRoute();
+
 
 
 </script>
@@ -17,6 +23,12 @@ import Footer from './components/common/Footer.vue';
   <div>
     <div class="backdrop"></div>
   <a class="backtop fas fa-arrow-up" href="#"></a>
+   
+
+  <span v-if="route.meta.albab">
+    <Register />
+  </span>
+  <span v-else>
     <div><Topbar/></div>
 
     <div><Header/></div>
@@ -34,18 +46,19 @@ import Footer from './components/common/Footer.vue';
 
   <div><ModalFade/></div>
 
+    <RouterView></RouterView>
 
-
-    <router-view></router-view>
-
-
+    
 
    <div><NewsPart/></div>
 
    
-    <div><IntroPart/></div>
+   <div><IntroPart/></div>
 
-   <div><Footer/></div>
+  <div><Footer/></div>
+  </span>
+
+
    
   </div>
 </template>

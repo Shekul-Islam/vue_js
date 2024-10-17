@@ -1,10 +1,23 @@
-<script setup></script>
+<script setup>
+// import { inject } from 'vue';
+
+const bannerImage = new URL(
+  "@/assets/images/single-banner.jpg",
+  import.meta.url
+).href;
+
+// if (!bannerImage) {
+//   console.warn('bannerImage not found');
+// }
+</script>
 
 <template>
   <div>
     <section
       class="inner-section single-banner"
-      style="background: url(images/single-banner.jpg) no-repeat center"
+      :style="{
+        background: 'url(' + bannerImage + ') center center no-repeat',
+      }"
     >
       <div class="container">
         <h2>Shop Page</h2>

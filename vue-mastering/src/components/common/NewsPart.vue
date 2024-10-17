@@ -1,12 +1,16 @@
 <script setup>
 
+const newsLetter = new URL ('@/assets/images/newsletter.jpg', import.meta.url).href;
 </script>
 
 <template>
   <div>
      <section
       class="news-part"
-      style="background: url(./assets/images/newsletter.jpg) no-repeat center"
+      :style="{ 
+        background: 'url(' + newsLetter +') center center no-repeat'
+
+      }"
     >
       <div class="container">
         <div class="row align-items-center">

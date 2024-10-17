@@ -52,15 +52,15 @@ function cartShow() {
                 ><i class="fas fa-user"></i
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a href="login.html" class="dropdown-item"> Login</a></li>
+                <li><router-link :to="{name: 'login'}" class="dropdown-item"> Login</router-link></li>
                 <li>
-                  <a href="register.html" class="dropdown-item"> Register</a>
+                  <router-link :to="{name: 'register'}" class="dropdown-item"> Register</router-link>
                 </li>
               </ul>
             </li>
 
-            <a href="wishlist.html" class="header-widget" title="Wishlist"
-              ><i class="fas fa-heart"></i><sup>0</sup></a
+            <router-link :to="{name: 'wishlist'}" class="header-widget" title="Wishlist"
+              ><i class="fas fa-heart"></i><sup>0</sup></router-link
             ><button class="header-widget header-cart" @click="cartShow" title="Cartlist">
               <i class="fas fa-shopping-basket"></i><sup>9+</sup
               ><span>total price<small>$345.00</small></span>

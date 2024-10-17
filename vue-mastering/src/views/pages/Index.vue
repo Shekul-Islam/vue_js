@@ -1,9 +1,9 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 </script>
 <template>
   <div>
@@ -13,18 +13,24 @@ import { Pagination, Navigation } from 'swiper/modules';
           <div class="col-lg-12 order-0 order-lg-1 order-xl-1">
             <div class="home-grid-slider slider-arrow slider-dots">
               <swiper
-              :slidesPerView="1"
-              :spaceBetween="30"
-              :autoplay="{ delay: 3000, disableOnInteraction: false }"
-              :loop="true"
-              :pagination="{ clickable: true }"
-              :navigation="true"
-              :modules="[Pagination, Navigation]"
-              class="mySwiper"
+                :slidesPerView="1"
+                :spaceBetween="30"
+                :autoplay="{ delay: 3000, disableOnInteraction: false }"
+                :loop="true"
+                :pagination="{ clickable: true }"
+                :navigation="true"
+                :modules="[Pagination, Navigation, Autoplay]"
+                class="mySwiper"
               >
-                <swiper-slide><img src="@/assets/images/banner/01.jfif" alt=""/></swiper-slide>
-                <swiper-slide><img src="@/assets/images/banner/02.jfif" alt=""/></swiper-slide>
-                <swiper-slide><img src="@/assets/images/banner/03.jfif" alt=""/></swiper-slide>
+                <swiper-slide
+                  ><img src="@/assets/images/banner/01.jfif" alt=""
+                /></swiper-slide>
+                <swiper-slide
+                  ><img src="@/assets/images/banner/02.jfif" alt=""
+                /></swiper-slide>
+                <swiper-slide
+                  ><img src="@/assets/images/banner/03.jfif" alt=""
+                /></swiper-slide>
               </swiper>
             </div>
           </div>
@@ -1047,161 +1053,196 @@ import { Pagination, Navigation } from 'swiper/modules';
         <div class="row">
           <div class="col">
             <ul class="new-slider slider-arrow">
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text new">New</label>
+              <swiper
+                :slidesPerView="5"
+                :spaceBetween="30"
+                :autoplay="{ delay: 3000, disableOnInteraction: false }"
+                :loop="true"
+                :pagination="{ clickable: true }"
+                :navigation="true"
+                :modules="[Pagination, Navigation, Autoplay]"
+                class="mySwiper"
+              >
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text new">New</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/01.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/01.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
 
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text new">New</label>
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text new">New</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/05.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/05.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
 
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text sale">sale</label>
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text sale">sale</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/07.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/07.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
 
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text sale">sale</label>
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text sale">sale</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/01.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/01.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
 
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text sale">sale</label>
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text sale">sale</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/06.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/06.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
 
-              <li>
-                <div class="product-card">
-                  <div class="product-media">
-                    <div class="product-label">
-                      <label class="label-text sale">sale</label>
+                <swiper-slide>
+                  <li>
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text sale">sale</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button
+                        ><a class="product-image" href="product-video.html"
+                          ><img
+                            src="@/assets/images/product/04.jpg"
+                            alt="product"
+                        /></a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="product-name">
+                          <a href="product-video.html">Products Name</a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$28<small></small></span>
+                        </h6>
+                        <button class="product-add" title="Add to Cart">
+                          <i class="fas fa-shopping-basket"></i><span>Add</span>
+                        </button>
+                      </div>
                     </div>
-                    <button class="product-wish wish">
-                      <i class="fas fa-heart"></i></button
-                    ><a class="product-image" href="product-video.html"
-                      ><img src="@/assets/images/product/04.jpg" alt="product"
-                    /></a>
-                  </div>
-                  <div class="product-content">
-                    <h6 class="product-name">
-                      <a href="product-video.html">Products Name</a>
-                    </h6>
-                    <h6 class="product-price">
-                      <del>$34</del><span>$28<small></small></span>
-                    </h6>
-                    <button class="product-add" title="Add to Cart">
-                      <i class="fas fa-shopping-basket"></i><span>Add</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
+                  </li>
+                </swiper-slide>
+              </swiper>
             </ul>
           </div>
         </div>
