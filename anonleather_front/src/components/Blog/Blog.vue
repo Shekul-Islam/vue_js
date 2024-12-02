@@ -1,24 +1,18 @@
 <script setup>
-/// All Import File  Code Is Here......................................................................................................
-import { CartSideBar, MobileMenu } from '@/components';
 import { ref, onMounted, computed } from "vue";
 import { useBlog } from '@/stores'
 import { storeToRefs } from 'pinia';
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
-// All Variable  Code Is Here.....................................................................................................
 const newSlide = ref([Navigation]);
 const modules = ref([Pagination, Autoplay]);
 
-const blog = useBlog();
 // getBlogPost data start
+const blog = useBlog();
 const blogPostData = ref()
 // getBlogPost data end
 
@@ -34,7 +28,14 @@ const getBlogPost = async (tagID = '', BlogPost = '') => {
 
 // Define a computed property to format the date
 const formattedDate = (createdAtString) => {
+  // Convert ISO string to Date object
   const createdAtDate = new Date(createdAtString);
+  
+  // Check if the date is valid
+  if (isNaN(createdAtDate.getTime())) {
+    return ""; // Return empty string if date is invalid
+  }
+  
   return createdAtDate.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -50,22 +51,18 @@ const formattedDate = (createdAtString) => {
 
 onMounted(() => {
   getBlogPost();
-  // blog.getBlogPost(); 
 });
 
-// API Calling Code Is Here.....................................................................................................
-
-// All Function  Code Is Here.....................................................................................................
 </script>
 
 <template>
   <div>
-  <section class="section blog-part" v-if="blogPostData?.length > 0">
+  <section class="blog-part" v-if="blogPostData?.length > 0">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="section-heading">
-              <h2><span class="testing">Read our articles</span></h2>
+            <div class="section-heading overwrite-blog-heading">
+              <h2><span class="section-header-text">Blog Title</span></h2>
               <div class="heading-line"></div>
             </div>
           </div>
@@ -81,7 +78,10 @@ onMounted(() => {
                 :autoplay="{
                   delay: 2000,
                 }"
-                :breakpoints="{ 320:{ slidesPerView:1,spaceBetweenSlides: 40  },480:{ slidesPerView:3,spaceBetweenSlides: 30  }, 790:{ slidesPerView:4,spaceBetweenSlides: 40 } }"
+                :breakpoints="{ 
+                  320 : { slidesPerView:1 },
+                  467 : { slidesPerView:2,spaceBetweenSlides: 30  },
+                  1200: { slidesPerView:3,spaceBetweenSlides: 40 } }"
                 :navigation="true"
                 :modules="newSlide"
                 class="mySwiper"
@@ -89,7 +89,7 @@ onMounted(() => {
                 <swiper-slide v-for="(blogPost, index) in blogPostData" :key="index">
                  <div class="blog-card">
                 <div class="blog-media">
-                  <router-link :to="{ name: 'blogDetailsPage', params:{ postId: blogPost.id} }" class="blog-img" href="#">
+                  <router-link :to="{ name: 'blogDetailsPage', params:{ postSlug: blogPost.slug} }" class="blog-img" href="#">
                       <img :src="blogPost.image" alt="blog">
                   </router-link>
                 </div>
@@ -108,6 +108,11 @@ onMounted(() => {
                       <a href="blog-details.html">{{ blogPost.title }}</a>
                   </router-link>
                   <p class="blog-desc" v-html="$filters.textShort(blogPost.description, 100)"></p>
+                  <div class="tags">
+                    <ul>
+                      <li v-for="(tag, index) in blogPost.tags" :key="index">{{ tag.name }}</li>
+                    </ul>
+                  </div>
                   <router-link :to="{ name: 'blogDetailsPage', params:{ postId: blogPost.id} }" class="blog-btn" href="#">
                       <span>read more</span>
                       <i class="icofont-arrow-right"></i>
@@ -122,10 +127,10 @@ onMounted(() => {
         <div class="row">
           <div class="col-lg-12">
             <div class="section-btn-25">
-              <a href="blog-grid.html" class="btn btn-outline">
+              <router-link :to="{name : 'blogPage'}" class="btn btn-outline">
                 <i class="fas fa-eye"></i>
                 <span>view all blog</span>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -133,7 +138,118 @@ onMounted(() => {
     </section>
   </div>
 </template>
+<style scoped>
 
-<style>
+
+
+/* blog title start */
+
+.section-header-text {
+  background-color: #f5f6f7;
+  padding: 10px 20px;
+  border: 3px solid var(--primary) !important;
+  border-top-width: 7px !important;
+  border-radius: 15px / 45px !important;
+  box-shadow: #ccdbe8 3px 3px 15px inset, #ffffff80 -3px -3px 12px 1px inset;
+  transition: all linear 0.2s;
+}
+
+.section-header-text:hover {
+  background-color: #f5f6f7;
+  border: 3px solid var(--secondary-color) !important;
+  border-top-width: 7px !important;
+  border-radius: 15px / 45px !important;
+  transition: all linear 0.2s;
+}
+
+.heading-line {
+  width: 100%;
+  background-color: var(--primary);
+  height: 2px;
+  margin-top: -25px;
+}
+.heading-line:hover {
+  background-color: var(--secondary-color);
+}
+
+
+/* blog title end */
+
+.tags {  
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.tags ul {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; 
+}
+
+.tags ul li {
+  border: 1px solid black;
+  padding: 2px 5px;
+  font-size: 14px;
+  background-color: var(--secondary-color);
+  color: var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .5s;
+ }
+.tags ul li:hover {
+  background-color: var(--primary);
+  color:  var(--secondary-color);
+  transition: .5s;
+}
+
+.blog-part{
+  margin: -35px 0px 22px 0px !important;
+}
+
+.blog-slider {
+  margin-top: -10px;
+}
+
+.blog-img img{
+  height: 300px;
+}
+
+@media (max-width: 991px) {
+  .section-header-text {
+    padding: 5px 20px;
+    border: 1px solid var(--primary) !important;
+    border-top-width: 3px !important;
+  }
+  .overwrite-blog-heading{
+    margin-top: -12px;
+    margin-bottom: 54px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-header-text{
+    font-size: 18px;
+  }
+  .heading-line{
+    margin-top: -20px;
+  }
+  .section-btn-25 a{
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .blog-part{
+    margin-top: -50px !important;
+  }
+
+  .section-heading{
+    margin: 15px 0 85px 0;
+  }
+
+  
+}
+
 
 </style>

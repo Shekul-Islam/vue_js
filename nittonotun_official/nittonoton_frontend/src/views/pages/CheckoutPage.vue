@@ -28,7 +28,7 @@ const deliveryInfo        = ref([]);
 const payment_gateways    = ref([]);
 const orderNote           = ref("");
 
-// coupon 
+// coupon
 const showCouponForm       = ref(false);
 const couponDiscountAmount = ref();
 const coupon               = ref('');
