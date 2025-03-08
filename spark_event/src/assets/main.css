@@ -1,0 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: "Poppins", serif;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+ul li{
+  list-style: none;
+}
+
+:root{
+  --primary-color: #C29774;
+  --secondary-color: #ffffff;
+  --tertiary-color: #363636;
+}
+
+/* Button Style Code here */
+
+.primary-button{
+  font: normal normal normal 16px/24px Poppins;
+  border-radius: 10px;
+  border: 1px solid #A57B5D;
+  background-color: #A57B5D;
+  color: #ffffff;
+  padding: 7px 20px;
+}
+.primary-button:hover{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.primary-button1{
+  font: normal normal normal 16px/24px Poppins;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 7px 20px;
+}
+.primary-button1:hover{
+  background-color: #A57B5D;
+  border-color: #A57B5D;
+}
+
+/* Swiper js pagination design  */
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  width: 35px !important;
+  height: 5px !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active{
+  background-color: var(--primary-color) !important;
+}
+
+.client-testimonials .swiper-pagination-horizontal.swiper-pagination-bullets{
+  display: none;
+}
+
+
+@media screen and (max-width:991px) {
+  .primary-button,
+  .primary-button1{
+    font-size: 16px;
+    padding: 3px 16px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .primary-button,
+  .primary-button1{
+    font-size: 16px;
+    padding: 2px 10px;
+  }
+  
+}
+
+@media screen and (max-width:575px) {
+  .swiper-pagination-horizontal.swiper-pagination-bullets{
+    display: none;
+  }
+}

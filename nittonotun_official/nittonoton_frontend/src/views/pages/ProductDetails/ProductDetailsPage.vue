@@ -43,6 +43,7 @@ const socialShares = ref("");
 // related product start
 const relatedProducts = ref('');
 // related product end
+
 // product counter  start
 const startDate = ref("");
 const productTimer = ref(true);
@@ -500,6 +501,7 @@ onMounted(() => {
               <template v-if="singleProduct?.short_description">
                 <p class="details-desc" v-html="singleProduct?.short_description"></p>
               </template>
+              
               <div class="details-add-group" v-if="singleProduct?.product_prices.length > 0">
                 <div class="row">
                   <span
@@ -583,6 +585,7 @@ onMounted(() => {
                   </div>
                 </div>
               </div>
+
               <div class="details-add-group" v-else>
                 <div class="row">
                   <div class="col-md-6 mt-2">
@@ -623,6 +626,7 @@ onMounted(() => {
                     </router-link>
                   </div>
                 </div>
+
                 <div class="row mt-2">
                   <div class="col-md-6 mt-2">
                     <button
