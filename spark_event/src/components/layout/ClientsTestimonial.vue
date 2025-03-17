@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const bgImg = ref(import.meta.env.VITE_APP_URL);
 </script>
 
 <template>
@@ -39,7 +38,7 @@ const bgImg = ref(import.meta.env.VITE_APP_URL);
                 </div>
 
                 <div class="col-xl-9 col-lg-8 order-lg-2 order-sm-1">
-                    <div class="testimonial-area" :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImg}/src/assets/image/home/testimonial/testimonial-bg.png) no-repeat center center/cover`}">
+                    <div class="testimonial-area" :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/src/assets/image/home/testimonial/testimonial-bg.png) no-repeat center center/cover`}">
                         <div class="testimonial-heading">
                             <h6>CLIENT'S TESTIMONIAL</h6>
                             <p>What our clients say about us</p>

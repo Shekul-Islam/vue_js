@@ -1,12 +1,10 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-const bgImg = ref(import.meta.env.VITE_APP_URL);
-
 </script>
 
 <template>
-  <div class="years-of-expreience" :style="{ background: `linear-gradient(#363636E6, #363636E6), url(${bgImg}/src/assets/image/about/years-of-expreience/Experience-Image.png) no-repeat center center / cover` }">
+  <div class="years-of-expreience" :style="{ background: `linear-gradient(#363636E6, #363636E6), url(/src/assets/image/about/years-of-expreience/Experience-Image.png) no-repeat center center / cover` }">
     <div class="container">
       <div class="heading-section">
           <h1>15 YEARS OF EXPERIENCE</h1>

@@ -1,12 +1,10 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-const bgImg = ref(import.meta.env.VITE_APP_URL);
-
 </script>
 
 <template>
-<div :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImg}/src/assets/image/contact/london-image.png) no-repeat center center/cover`}">
+<div :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/src/assets/image/contact/london-image.png) no-repeat center center/cover`}">
     <div class="container">
         <div class="contact-form">
             <div class="section-heading" >

@@ -8,11 +8,9 @@ import {
   MarketingManagementView,      HospitalityInvestmentFeasibilityView, RevenueYieldManagementView,        KitchenManagementView,
   CareerManagementView,         ProjectsView,                         ContactView,                       JobVacancyView,                    
   PrivacyPolicy,                TramsAndConditions,                   ApplyFormView,                     BlogView,
-  CareerJobDetailsView,    CareerApplyFormView,
+  CareerJobDetailsView,         CareerApplyFormView,
 
 } from "@/views";
-
-
 
 
 
@@ -45,7 +43,7 @@ const routes = [
   { path: '/marketing-management',              name: 'marketing-management',               component: MarketingManagementView,              },
   { path: '/hospitality-investment-feasibility',name: 'hospitality-investment-feasibility', component: HospitalityInvestmentFeasibilityView, },
   { path: '/revenue-yield-management',          name: 'revenue-yield-management',           component: RevenueYieldManagementView,           },
-  { path: '/career-management',                 name: 'career-management',                  component: CareerManagementView,                 },
+  { path: '/career-management/:id?',            name: 'career-management',                  component: CareerManagementView,                 },
   { path: '/career-job-details/:id?',           name: 'career-job-details',                 component: CareerJobDetailsView,            },
   { path: '/career-apply-form/:id?',            name: 'career-apply-form',                  component: CareerApplyFormView, props: true,     },
 ]

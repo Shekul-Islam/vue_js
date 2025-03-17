@@ -1,13 +1,12 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-const bgImg = ref(import.meta.env.VITE_APP_URL);
 
 </script>
 
 <template>
 <div class="page-banner">
-    <div class="slider-content" :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImg}/src/assets/image/home/home-slider/image-1.png) no-repeat center center/cover`}">
+    <div class="slider-content" :style="{ background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/src/assets/image/home/home-slider/image-1.png) no-repeat center center/cover`}">
         <div class="slider-text">
           <h2>Hotel Operations And Staffing Management</h2>
           <p>From seamless operations to tailored staffing, we’re your one-stop solution for exceptional hospitality management.</p>

@@ -4,14 +4,10 @@ import { useRouter, useRoute } from 'vue-router';
 import { useJobPost } from '@/stores/jobpost';
 
 const details = useJobPost();
-
-const router = useRouter();
-const route = useRoute();
+const router  = useRouter();
+const route   = useRoute();
 
 const jobDetails = ref(null);
-
-
-
 
 
 const getDetails = async ()=>{
@@ -25,10 +21,6 @@ const getDetails = async ()=>{
     
     if ( res?.success){
       jobDetails.value = res?.result;
-      
-      console.log(res.result);
-      
-     
     }
   }catch(error){
     console.error("API Error:", error);
@@ -55,7 +47,7 @@ onMounted (()=>{
           <!-- Left Section (Job Info) -->
           <div class="col-lg-4">
             <div class="job-info-card">
-              <h5 class="company-name">HYATT REGENCY - 2459(missing)</h5>
+              <h5 class="company-name">{{ jobDetails?.company_name }}</h5>
               <p class="location-text">{{ jobDetails?.address }}</p>
               <div class="info-box">
                 <p><strong>Job Ref:</strong> <span>{{ jobDetails?.reference }}</span></p>
@@ -64,7 +56,7 @@ onMounted (()=>{
                 <p><strong>Salary/Benefits:</strong> <span>{{ jobDetails?.salary }}/{{ jobDetails?.benefit }}</span></p>
                 <p><strong>Contract type:</strong> <span>{{ jobDetails?.contract_type }}</span></p>
                 <p><strong>Hours:</strong> <span>{{ jobDetails?.hours }}</span></p>
-                <p><strong>Date posted:</strong> <span>28/02/2025(missing)</span></p>
+                <p><strong>Date posted:</strong> <span>{{jobDetails?.created_at}}</span></p>
                 <p><strong>Closing date:</strong> <span>{{ jobDetails?.closing_date }}</span></p>
               </div>
             </div>
@@ -145,12 +137,12 @@ onMounted (()=>{
 
 /* Left Side (Job Info) */
 .job-info-card {
-  background: white;
   padding: 20px;
+  background: white;
+  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .company-name {
@@ -246,6 +238,7 @@ onMounted (()=>{
 }
 
 .job-image img {
+  height: 400px;
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;

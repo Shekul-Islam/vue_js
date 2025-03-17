@@ -193,7 +193,7 @@ onUnmounted(() => {
                             <router-link :to="{name: 'blog'}" :class="{'active' : route.name == 'blog'}">Blog</router-link>
                         </li>
                         <li>
-                            <router-link :to="{name: 'job-vacancy'}" :class="{'active' : route.name == 'job-vacancy'}">Job Vacancy</router-link>
+                            <router-link :to="{name: 'career-management'}" :class="{'active' : route.name == 'job-vacancy'}">Job Vacancy</router-link>
                         </li>
                         <li>
                             <router-link :to="{name: 'contact-us'}" :class="{'active' : route.name == 'contact-us'}">Contact Us</router-link>
