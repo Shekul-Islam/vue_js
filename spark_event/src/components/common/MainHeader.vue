@@ -202,7 +202,7 @@ onUnmounted(() => {
                 </div>
 
                 <div class="action-area">
-                    <button class="primary-button me" @click="router.push('apply-form')">Apply Now</button>
+                    <button class="primary-button me" @click="router.push('apply-now-form')">Apply Now</button>
                     <button class="primary-button1"> Staff Log In </button>
                 </div>
 

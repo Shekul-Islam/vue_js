@@ -1,4 +1,3 @@
-
 <script setup>
 
 </script>
@@ -33,66 +32,66 @@
                         <div class="availability-table">
                             <h2>Availability</h2>
                             <table>
-                              <thead>
-                                <tr>
-                                  <th></th>
-                                  <th>Early</th>
-                                  <th>Late</th>
-                                  <th>Night</th>
-                                  <th>Unavailable</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Monday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Tuesday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Wednesday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Thursday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Friday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Saturday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                                <tr>
-                                  <td>Sunday</td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                  <td><input type="checkbox"></td>
-                                </tr>
-                              </tbody>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Early</th>
+                                        <th>Late</th>
+                                        <th>Night</th>
+                                        <th>Unavailable</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -126,14 +125,14 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-8 col-md-10">
+                    <div class="col-lg-6 col-md-6">
                         <div class="form-group-field">
                             <label for="">E-mail Address</label>
                             <input type="text" placeholder="Your E-mail">
                         </div>
                     </div>
 
-                    <div class="col-lg-8 col-md-10">
+                    <div class="col-lg-6 col-md-6">
                         <div class="form-group-field">
                             <label for="">Phone Number</label>
                             <input type="text" placeholder="Your Phone">
@@ -170,7 +169,7 @@
                             <input type="text" placeholder="Your Town">
                         </div>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="form-group-field">
                             <label for="">Postal Code</label>
@@ -217,7 +216,7 @@
                             <input type="text" placeholder="Your Passport Number">
                         </div>
                     </div>
-                    
+
                     <div class="col-md-12 mb-4">
                         <div class="form-group-field">
                             <label for="">Upload Passport</label>
@@ -296,32 +295,38 @@
 </template>
 
 <style scoped>
-.apply-form-page{
+.apply-form-page {
     padding: 70px 0;
     background: #FAFAFA 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 20px #0000000D;
 }
-.application-form{
+
+.application-form {
     border: 1px solid #D5D5D5;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     padding: 65px 22px;
+    box-shadow: 0px 4px 20px #0000000D;
+
 }
-.form-title{
+
+.form-title {
     margin-bottom: 70px;
 }
-.form-title h1{
+
+.form-title h1 {
     font: normal normal 600 40px/60px Montserrat;
     color: #464646;
     text-transform: uppercase;
 }
 
-.form-group label{
+.form-group label {
     font: normal normal normal 24px/36px Poppins;
     color: #363636;
     margin-bottom: 10px;
 }
 
 .form-group .custom-select,
-.form-group-field .custom-select{
+.form-group-field .custom-select {
     width: 100%;
     padding: 8px 16px;
     font-size: 16px;
@@ -351,17 +356,17 @@
     margin-top: 70px;
 }
 
-.availability-table  h2 {
+.availability-table h2 {
     font: normal normal medium 24px/36px Poppins;
     color: #363636;
 }
 
-.availability-table  table {
+.availability-table table {
     width: 100%;
     border-spacing: 0;
 }
 
-.availability-table  thead th {
+.availability-table thead th {
     background-color: #EEEEEE;
     text-align: center;
     padding: 10px;
@@ -387,23 +392,27 @@
 }
 
 .availability-table input[type="checkbox"] {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     cursor: pointer;
 }
-.personal-details-title{
+
+.personal-details-title {
     margin-top: 50px;
 }
-.personal-details-title h2{
+
+.personal-details-title h2 {
     font: normal normal 600 28px/42px Montserrat;
     color: #464646;
     text-transform: uppercase;
 }
-.form-group-field label{
+
+.form-group-field label {
     font: normal normal normal 16px/24px Poppins;
     padding: 5px 6px;
     color: #363636;
 }
-.form-group-field input{
+
+.form-group-field input {
     border: 1px solid #D5D5D5;
     border-radius: 8px;
     width: 100%;
@@ -412,18 +421,21 @@
     outline: none;
     color: var(--primary-color);
 }
-.form-group-field input[type="date"]{
+
+.form-group-field input[type="date"] {
     color: #D5D5D5;
 }
-.form-group-field input:focus{
+
+.form-group-field input:focus {
     border-color: var(--primary-color);
 }
-.form-group-field input::placeholder{
+
+.form-group-field input::placeholder {
     font: normal normal normal 14px/21px Poppins;
     color: #D5D5D5;
 }
 
-.files-upload-field{
+.files-upload-field {
     width: 170px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #D5D5D5;
@@ -434,15 +446,18 @@
     align-items: center;
     position: relative;
 }
-.files-upload-field span{
+
+.files-upload-field span {
     font: normal normal normal 16px/21px Poppins;
     color: #A57B5D;
 }
-.files-upload-field i{
+
+.files-upload-field i {
     color: #A57B5D;
     font-size: 20px;
 }
-.files-upload-field input{
+
+.files-upload-field input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -451,64 +466,77 @@
     opacity: 0;
     cursor: pointer;
 }
-.form-group-field>span{
+
+.form-group-field>span {
     text-align: left;
     font: italic normal 300 14px/21px Poppins;
     color: #464646;
     padding-left: 8px;
 }
-.primary-button1{
+
+.primary-button1 {
     padding: 10px 64px;
     margin-top: 20px;
 }
-.form-group-field{
+
+.form-group-field {
     position: relative;
 }
-.phone-example{
+
+.phone-example {
     position: absolute;
     right: 0;
     bottom: -3px;
 }
 
 @media screen and (max-width: 991px) {
-    .form-title{
+    .form-title {
         margin-bottom: 50px;
     }
-    .availability-table{
+
+    .availability-table {
         margin-top: 50px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .application-form{
+    .application-form {
         padding: 50px 12px;
     }
-    .form-title h1{
+
+    .form-title h1 {
         font: normal normal 600 24px/36px Montserrat;
     }
-    .availability-table h2{
+
+    .availability-table h2 {
         font: normal normal normal 24px/36px Poppins;
     }
+
     .availability-table thead th,
-    .availability-table tbody td{
+    .availability-table tbody td {
         font: normal normal 600 15px/21px Poppins;
     }
-    .personal-details-title h2{
+
+    .personal-details-title h2 {
         font: normal normal 600 24px/36px Montserrat;
     }
-    .form-group-field input{
+
+    .form-group-field input {
         margin-bottom: 10px;
     }
-    .form-group-field > span{
+
+    .form-group-field>span {
         bottom: -10px;
     }
 }
+
 @media screen and (max-width: 575px) {
+
     .availability-table thead th,
-    .availability-table tbody td{
+    .availability-table tbody td {
         font: normal normal 600 13px/21px Poppins;
         padding-left: 2px;
-        padding-right: 2px ;
+        padding-right: 2px;
     }
 
 }

@@ -29,3 +29,4 @@ export { default as RevenueYieldManagementView } from '@/views/pages/RevenueYiel
 export { default as CareerManagementView } from '@/views/pages/CareerManagementView.vue'
 export { default as CareerJobDetailsView } from '@/views/pages/CareerJobDetailsView.vue'
 export { default as CareerApplyFormView } from '@/views/pages/CareerApplyFormView.vue'
+export { default as ApplyNowView } from '@/views/pages/ApplyNowView.vue'

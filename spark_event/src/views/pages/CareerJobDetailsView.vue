@@ -28,8 +28,24 @@ const getDetails = async ()=>{
 };
 
 
+
+
+// const goToApplyForm = () => {
+//   router.push({ name: 'career-apply-form' });
+// };
+
+
+console.log(jobDetails);
+
 const goToApplyForm = () => {
-  router.push({ name: 'career-apply-form', params: { id: route.params.id } });
+  console.log('Job ID:', jobDetails.value.id);
+  console.log('Job Title:', jobDetails.value.title);
+  if (jobDetails.value.id && jobDetails.value.title) {
+    router.push({
+      name: 'career-apply-form',
+      params: { id: jobDetails.value.id, title: jobDetails.value.title }
+    });
+  }
 };
 
 
@@ -47,6 +63,7 @@ onMounted (()=>{
           <!-- Left Section (Job Info) -->
           <div class="col-lg-4">
             <div class="job-info-card">
+              
               <h5 class="company-name">{{ jobDetails?.company_name }}</h5>
               <p class="location-text">{{ jobDetails?.address }}</p>
               <div class="info-box">

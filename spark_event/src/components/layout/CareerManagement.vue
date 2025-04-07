@@ -62,8 +62,8 @@
       price        : price.value.filter(val => val !== null),
       per_page     : perPage
     });
-    
 
+    
     // Check if response is valid and meta exists
     if (res && res?.result?.meta && res?.result?.meta.total !== undefined) {
       postData.value = res?.result.data;
@@ -108,16 +108,15 @@
               <label class="form-label">Keyword</label>
               <input v-model="searchKey" type="text" placeholder=" Job Title" class="form-control" />
             </div>
-
             <!-- Location & Distance -->
             <div class="col-lg-4 col-md-4">
               <label class="form-label">Location</label>
               <div class="d-flex location-input">
-                <select v-model="location" class="form-select country-select">
-                  <option value=""  selected>UK</option>
+                <select  v-model="location" class="form-select country-select">
+                  <option v-for="(locatonData, i) in postData" :key="i" value=""  selected>{{ locatonData?.location }}</option>
                 </select>
                 <div class="postcode">
-                  <input v-model="postCode" type="text" class="form-control " placeholder=" City or Postcode" />
+                  <input v-model="postCode" type="text" class="form-control " placeholder="City or Postcode" />
                 </div>
               </div>
             </div>
@@ -161,7 +160,6 @@
                           <select v-model="jobTypeId" class="main-select">
                             <option value="" disabled selected>Job Type..</option>
                             <option :value="data.id" v-for="(data, i) in post.jobTyps" :key="i">{{ data.name }}</option>
-
                           </select>
                         </div>
                         <div class="col-md-6 mb-3 position-relative">
@@ -187,7 +185,6 @@
                   </div>
                 </transition>
           </div>
-
         </div>
 
 
